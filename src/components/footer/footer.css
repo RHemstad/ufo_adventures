@@ -1,0 +1,10 @@
+/* ************************ */
+/* ******* FOOTER ********* */
+
+footer {
+    padding-inline: var(--spacing-md);
+    padding-block: var(--spacing-md);
+    font-size: var(--font-size-small);
+    color: var(--color-neutral);
+    width: 100%;
+  }
