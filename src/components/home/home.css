@@ -1,0 +1,187 @@
+/* ******************************************************************* */
+/* *********************** HERO ***************************** */
+/* ******************************************************************* */
+
+#hero {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   /* background: var(--color-primary) url("../images/sky.svg");*/
+    background-size: cover;
+    background-position: top;
+  }
+
+.hero article {
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: var(--spacing-xx-lg);
+    border: 1px solid red;
+}
+  
+
+.hero h2 {
+        font-size: var(--font-size-h1);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-text);
+        margin-bottom: var(--spacing-xx-lg);
+}
+
+
+/* ******************************************************************* */
+/* *********************** TICKETS ***************************** */
+/* ******************************************************************* */
+
+#tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-neutral);
+    padding: var(--spacing-xx-lg);
+    border: 1px solid red;
+
+}
+
+.tickets div.subheading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding-bottom: var(--spacing-x-lg);
+    margin-bottom: var(--spacing-xx-lg);
+    width: 100%;
+}
+
+.tickets div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tickets div article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-xx-lg);
+    border: 1px solid green;
+    width: 60ch;
+    padding: var(--spacing-xx-lg);
+}
+
+.tickets div article img {
+    width: 100%;
+}
+
+
+/* ******************************************************************* */
+/* *********************** PLANNING YOUR ABDUCTION ***************************** */
+/* ******************************************************************* */
+
+#pya {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-neutral);
+    padding: var(--spacing-xx-lg);
+    border: 1px solid red;
+}
+
+.pya div.subheading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding-bottom: var(--spacing-x-lg);
+    margin-bottom: var(--spacing-xx-lg);
+    width: 100%;
+}
+
+.pya div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pya div article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-xx-lg);
+    border: 1px solid green;
+    width: 28ch;
+    padding: var(--spacing-xx-lg);
+}
+
+/* ******************************************************************* */
+/* *********************** TESTIMONIALS ***************************** */
+/* ******************************************************************* */
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-neutral);
+    padding: var(--spacing-xx-lg);
+    border: 1px solid red;
+}
+
+.testimonials div.subheading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding-bottom: var(--spacing-x-lg);
+    margin-bottom: var(--spacing-xx-lg);
+    width: 100%;
+}
+
+.testimonials div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testimonials div article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-xx-lg);
+    border: 1px solid green;
+    width: 28ch;
+    padding: var(--spacing-xx-lg);
+    transition: 0.5s;
+}
+
+
+
+.testimonials div article .card_picture {
+    background-color: #007bff;
+    color: #ffffff;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: -60px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimonials div article .card_body {
+    display: flex;
+    flex-direction: column;
+}

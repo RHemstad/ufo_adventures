@@ -9,7 +9,7 @@ const Header = () => {
     
     <header className="header">
 
-    <h1><Link to="/">Site Title</Link></h1>
+    <h1><Link to="/">UFO Adventures</Link></h1>
 
 
     

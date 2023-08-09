@@ -14,9 +14,9 @@
   
     /**************** TYPOGRAPHY ****************/
 
-    --font-family-body: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif,
+    --font-family-body: "Cantarell", "Segoe UI", "Helvetica Neue", Arial, sans-serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-family-headings: "Oswald", "Segoe UI", "Helvetica Neue", Arial,
+    --font-family-headings: "Fjalla One", "Segoe UI", "Helvetica Neue", Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   
     /* Base size: 16px */
@@ -71,6 +71,8 @@
     --size-border-radius-medium: 4px;
     --size-border-radius-large: 80px;
   
+
+
 
   
  /**************** SPACING ****************/
