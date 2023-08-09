@@ -14,7 +14,7 @@ const Home = () => {
 
     Hello World
     
-    <p>Branch test</p>
+    <p>Branch test 2</p>
     
     </>
   )
