@@ -27,7 +27,12 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-### What's needed
+### What's needed to get this running
 
 This project uses react-router-dom
 you will need to install it
+`npm install react-router-dom`
+
+You might also need to do the following when you first clone the site and you try to do npm start and it doesn't work
+`npm install` 
+
