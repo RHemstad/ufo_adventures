@@ -11,6 +11,8 @@ const Home = () => {
    When you click on the Tickets link click on the top name "home" to return to the home page</p>
     <Link to="/tickets">Tickets</Link>
     
+
+    Hello World
     
     </>
   )
