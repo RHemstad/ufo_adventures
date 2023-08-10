@@ -89,15 +89,13 @@
   /* ************* MISCELLANEOUS ************** */
   /* *********************************** */
     
-    p {
+   /* p {
       max-width: 72ch;
-    }
+    } */
 
     section {
         color: var(--color-text);
-        margin-top: 1rem;
         padding-bottom: 1rem;
-        border: 1px solid red;
     }
 
     
@@ -134,7 +132,7 @@ main {
   /* font-size: var(--font-size-mobile);*/
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   html {
     /*font-size: 18px; */
     /*font-size: var(--font-size-desktop);*/

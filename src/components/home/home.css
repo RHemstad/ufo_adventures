@@ -9,24 +9,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   /* background: var(--color-primary) url("../images/sky.svg");*/
-    background-size: cover;
-    background-position: top;
+   background: var(--color-primary) url("../../assets/images/hero_alien.png");
+
+   background-size: cover;
+  /*background-position: 0 -200px;*/
+  background-position: 0 -100px;
+   color: var(--color-neutral);
+   padding: 4rem;
   }
 
 .hero article {
-    max-width: 60ch;
+    max-width: 45ch;
     margin: 0 auto;
     padding: var(--spacing-xx-lg);
-    border: 1px solid red;
 }
   
 
 .hero h2 {
-        font-size: var(--font-size-h1);
+        font-size: var(--font-size-h2);
         font-weight: var(--font-weight-bold);
-        color: var(--color-text);
+        color: var(--color-neutral);
         margin-bottom: var(--spacing-xx-lg);
+}
+
+.hero h5 {
+    color: var(--color-neutral);
 }
 
 
@@ -41,8 +48,6 @@
     justify-content: center;
     background: var(--color-neutral);
     padding: var(--spacing-xx-lg);
-    border: 1px solid red;
-
 }
 
 .tickets div.subheading {
@@ -163,7 +168,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-xx-lg);
-    border: 1px solid green;
+    border: 1px solid var( --color-neutral-light);
     width: 28ch;
     padding: var(--spacing-xx-lg);
     transition: 0.5s;
@@ -172,8 +177,8 @@
 
 
 .testimonials div article .card_picture {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--color-neutral-light);
+    color: var(--color-neutral);
     width: 75px;
     height: 75px;
     line-height: 75px;
@@ -185,3 +190,51 @@
     display: flex;
     flex-direction: column;
 }
+
+
+/* *********************************** */
+  /* ********** FLYING UFO ************ */
+  /* *********************************** */
+  
+  #animation {
+    width: 100%;
+  }
+  
+  #animation div#ufo,
+  #animation #ufo img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  #animation .x {
+    -webkit-animation: x 13s linear infinite alternate;
+            animation: x 13s linear infinite alternate;
+  }
+  
+  #animation .y {
+    -webkit-animation: y 7s linear infinite alternate;
+            animation: y 7s linear infinite alternate;
+  }
+  
+  @-webkit-keyframes x {
+    100% {
+      transform: translateX(calc(100vw - 100px));
+    }
+  }
+  
+  @keyframes x {
+    100% {
+      transform: translateX(calc(100vw - 100px));
+    }
+  }
+  @-webkit-keyframes y {
+    100% {
+      transform: translateY(calc(100vh - 100px));
+    }
+  }
+  @keyframes y {
+    100% {
+      transform: translateY(calc(100vh - 100px));
+    }
+  }
