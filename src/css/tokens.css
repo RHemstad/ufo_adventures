@@ -14,9 +14,9 @@
   
     /**************** TYPOGRAPHY ****************/
 
-    --font-family-body: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif,
+    --font-family-body: "Cantarell", "Segoe UI", "Helvetica Neue", Arial, sans-serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-family-headings: "Oswald", "Segoe UI", "Helvetica Neue", Arial,
+    --font-family-headings: "Fjalla One", "Segoe UI", "Helvetica Neue", Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   
     /* Base size: 16px */
@@ -41,38 +41,54 @@
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
-  
+
+     /**************** BORDER RADIUS ****************/
+     --size-border-radius-full: 50%;
+     --size-border-radius-small: 1px;
+     --size-border-radius-medium: 4px;
+     --size-border-radius-large: 80px;
+   
     /**************** CORE COLOR PALETTE ****************/
 
     --color-white: #ffffff;
     --color-black: #000000;
 
     --color-neutral: #f9faf5;
-    --color-primary: #000a38; /*#174396*/
+    --color-primary: #192b3c;/* #213345;/*#000a38; /*#174396*/
     --color-secondary: #99cc33;
     --color-tertiary: #c0ef4d;
     --color-alert: red;
+    --color-neutral-light: #6B6E70;
+    --color-neutral-medium: ##474B4F;
+    --color-neutral-dark: #222629;
+
+
+    /* 285b7a
 
 
 
-/**************** TEXT ****************/
-    --color-text: var(--color-primary);
 
- /**************** LINKS ****************/
+
+ /**************** BUTTON PRIMARY ****************/
+--color-button-background-primary-normal: var(--color-primary);
+--color-button-background-primary-hover: var(--color-secondary);
+--color-button-background-primary-active: var(--color-secondary);
+--color-button-background-primary-disabled: var(--color-neutral);
+--color-button-text-primary-normal: var(--color-neutral);
+--color-button-text-primary-hover: var(--color-primary);
+--color-button-text-primary-active: var(--color-primary);
+--color-button-text-primary-disabled: var(--color-primary);
+
+
+
+
+/**************** LINKS ****************/
  /* Content links not nav bar links */
-    --color-link-normal: var(--color-primary);
-    --color-link-hover: var(--color-tertiary);
-    --color-link-visited: var(--color-primary);
-    --color-link-active: var(--color-tertiary);
-  
- /**************** BORDER RADIUS ****************/
-    --size-border-radius-full: 50%;
-    --size-border-radius-small: 1px;
-    --size-border-radius-medium: 4px;
-    --size-border-radius-large: 80px;
-  
+ --color-link-normal: var(--color-primary);
+ --color-link-hover: var(--color-tertiary);
+ --color-link-visited: var(--color-primary);
+ --color-link-active: var(--color-tertiary);
 
-  
  /**************** SPACING ****************/
     --spacing-xx-sm: 0.25rem;
     --spacing-x-sm: 0.5rem;
@@ -84,6 +100,9 @@
     --spacing-xxx-lg: 2rem;
 
 
+
+/**************** TEXT ****************/
+--color-text: var(--color-primary);
 
 
 
