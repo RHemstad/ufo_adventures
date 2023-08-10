@@ -162,24 +162,6 @@ const Home = () => {
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    Hello World
-    
-    <p>Branch test 2</p>
-    
     </>
   )
 }
