@@ -104,8 +104,9 @@ const Home = () => {
 <article>
 <h3>Weather Checking Tool</h3>
 <p>Plan your abduction with confidence by checking the weather on the day and location of your scheduled encounter. Stay informed and be ready to explore the cosmos, rain or shine!</p>
-<Button className="primary-button">Select</Button>
-
+            <Link to="/weather">
+              <Button className="primary-button">Select</Button>
+            </Link>
 </article>
 
 <article>
