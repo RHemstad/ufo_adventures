@@ -25,6 +25,7 @@
   width: 100%;
   width: fit-content;
   border: 1px solid var(--color-button-background-primary-normal);
+  font-size: var(--font-size-body);
 }
 
 .primary-button:disabled {
