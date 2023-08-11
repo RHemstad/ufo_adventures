@@ -1,0 +1,10 @@
+div.subheading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding-bottom: var(--spacing-x-lg);
+    margin-bottom: var(--spacing-xx-lg);
+    width: 100%;
+}

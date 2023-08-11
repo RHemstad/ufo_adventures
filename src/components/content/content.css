@@ -2,7 +2,11 @@
 /* ******************************************************************* */
 /* *********************** main ***************************** */
 /* ******************************************************************* */
-
-main {
-    width: 100%;
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-neutral);
+    color: var(--color-text);
   }

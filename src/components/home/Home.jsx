@@ -107,7 +107,11 @@ const Home = () => {
 <article>
 <h3>Packing Checklist</h3>
 <p>From space-age essentials to cosmic curiosities, we've got you covered. Get ready for the journey of a lifetime – check off your packing list now and gear up for an out-of-this-world experience!</p>
-<Button className="primary-button">Select</Button>
+
+<Link to="/packingchecklist">
+        <Button className="primary-button">Select</Button>
+        </Link>
+
 </article>
 
 </div>

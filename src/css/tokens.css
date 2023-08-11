@@ -54,9 +54,9 @@
     --color-black: #000000;
 
     --color-neutral: #f9faf5;
-    --color-primary: #192b3c;/* #213345;/*#000a38; /*#174396*/
-    --color-secondary: #99cc33;
-    --color-tertiary: #c0ef4d;
+    --color-primary: #213345;
+    --color-secondary: #3c887e;
+    --color-tertiary: #D1AC00;
     --color-alert: red;
     --color-neutral-light: #6B6E70;
     --color-neutral-medium: ##474B4F;
@@ -71,12 +71,13 @@
 
  /**************** BUTTON PRIMARY ****************/
 --color-button-background-primary-normal: var(--color-primary);
---color-button-background-primary-hover: var(--color-secondary);
+--color-button-background-primary-hover: var(--color-tertiary);
 --color-button-background-primary-active: var(--color-secondary);
 --color-button-background-primary-disabled: var(--color-neutral);
+
 --color-button-text-primary-normal: var(--color-neutral);
 --color-button-text-primary-hover: var(--color-primary);
---color-button-text-primary-active: var(--color-primary);
+--color-button-text-primary-active: var(--color-neutral);
 --color-button-text-primary-disabled: var(--color-primary);
 
 
