@@ -6,23 +6,27 @@ import Button from '../button/Button';
 
 import placeholder from '../../assets/images/600x400.svg';
 import ufo from '../../assets/images/ufo.svg';
+import standard_package from '../../assets/images/standard_package.png';
+import vip_package from '../../assets/images/vip_package.png';
+
 
 const Home = () => {
   return (
     <>
 
 
+
 {/* ****************************************** */} 
 {/* **************** HERO  ******************* */} 
 {/* ****************************************** */} 
+<div id="animation">
+<div id="ufo" className="x"><img className="y" src={ufo} alt="spaceship"/></div>
+</div>
 
 <section id="hero" className="hero">
 
-<div id="animation">
-          <div id="ufo" className="x">
-            <img className="y" src={ufo} alt="spaceship"/>
-          </div>
-        </div>
+
+
 
 
 
@@ -58,7 +62,7 @@ const Home = () => {
 
 <div>
 <article>
-<div><img src={placeholder} alt="placeholder"/></div>
+<div><img src={standard_package} alt="placeholder"/></div>
 <h3>Standard Abduction Experience</h3>
 <p>The Standard Abduction Experience promises an extraordinary cosmic adventure that will leave you in awe. Join our extraterrestrial guides as they whisk you away on a journey of discovery through the galaxies. Witness stunning interstellar landscapes. Immerse yourself in the wonders of their advanced technology. Enjoy a mesmerizing blend of adventure, curiosity, and exploration.</p>
 
@@ -67,7 +71,7 @@ const Home = () => {
 </article>
 
 <article>
-<div><img src={placeholder} alt="placeholder"/></div>
+<div><img src={vip_package} alt="placeholder"/></div>
 <h3>VIP Abduction Package</h3>
 <p>The VIP Abduction Package offers an unparalleled interstellar experience beyond your wildest dreams. As a privileged voyager, you'll be treated to exclusive encounters with our advanced extraterrestrial hosts, gaining insights into their culture and technology. But that's not all - you'll also have the unique opportunity to participate in groundbreaking scientific experiments</p>
 <Button className="primary-button" to="/tickets">Purchase Tickets</Button>
