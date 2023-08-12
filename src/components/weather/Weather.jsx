@@ -47,7 +47,7 @@ const Weather = () => {
     
     return (
         <>            
-            <div>
+            <section className="weather">
                 <h3>Check the Weather</h3>
                 {submitted ? (
                     <div>
@@ -55,11 +55,11 @@ const Weather = () => {
                         <button onClick={handleChangeLocation} className="primary-button">Change Location</button>
                     </div>
                 ) : (
-                        <div>
-                            <div>
-                                <p>Select your abduction site:</p>
+                        <div className="main">
+                            <div className="input-group">
+                                <label className="locationLabel">Select your abduction site:</label> {/* MAKE THIS 700 FONT WEIGHT*/}
                                 {locationOptions.map((location) => (
-                                    <label key={location.id}>
+                                    <label key={location.id} id="option">
                                         <input
                                             type="radio"
                                             name="location"
@@ -78,7 +78,7 @@ const Weather = () => {
 
                         </div>
                 )}
-            </div>
+            </section>
         </>
     )
 }
