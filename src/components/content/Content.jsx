@@ -18,8 +18,8 @@ const Content = () => {
        <Route path="/" element={<Home />} />
        <Route path="/home" element={<Home />} />
        <Route path="/tickets" element={<Tickets />} />
-          <Route path="/packingchecklist" element={<PackingChecklist />} />
-          <Route path="/weather" element={<Weather />} />
+      <Route path="/packingchecklist" element={<PackingChecklist />} />
+      <Route path="/weather" element={<Weather />} />
    </Routes>
 
 

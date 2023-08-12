@@ -104,7 +104,7 @@ nav {
 
 .menu a:hover {
   background-color: var( --color-tertiary);
-  color: var(--color-primary);
+  color: var(--color-neutral);
 }
 
 .menu li a:active {

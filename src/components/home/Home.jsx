@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import Button from '../button/Button';
 
 
+
 import ufo from '../../assets/images/ufo.svg';
 import standard_package from '../../assets/images/standard_package.png';
 import vip_package from '../../assets/images/vip_package.png';
@@ -154,7 +155,7 @@ const Home = () => {
   <article className="card">
         <div className="card_picture"><img src={testimonial3} alt="Richard Anderson"/></div>
         <div className="card_body">
-          <p className="card_text">"Nothing could have prepared me for this awe-inspiring experience. The Standard Abduction Package offered a genuine and authentic encounter with their friendly alien hosts."</p>
+          <p className="card_text">"Nothing could have prepared me for this awe-inspiring experience. The Standard Abduction Package offered a genuine and authentic encounter with their alien hosts."</p>
          <cite title="Source Title">Richard Anderson, <br></br>Retired Aerospace Engineer</cite>
         </div>
   </article>
