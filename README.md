@@ -36,3 +36,5 @@ you will need to install it
 You might also need to do the following when you first clone the site and you try to do npm start and it doesn't work
 `npm install` 
 
+`npm install --save react-modal`
+

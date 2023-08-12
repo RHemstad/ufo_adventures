@@ -14,6 +14,7 @@
    overflow: hidden;
    color: var(--color-neutral);
    padding: var(--spacing-xx-lg);
+   min-height: 600px;
   }
 
 
@@ -45,8 +46,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--color-neutral);
+    background: var(--color-neutral-medium);
     padding: var(--spacing-xx-lg);
+    padding-top: var(--spacing-xxx-lg);
 }
 
 #tickets div:first-child {
@@ -62,6 +64,15 @@
     margin-bottom: var(--spacing-xx-lg);
     width: 100%;
 }
+
+.tickets div.subheading h5 {
+  color: var(--color-secondary);
+}
+
+.tickets div.subheading h2 {
+  color: var(--color-secondary);
+}
+
 
 .tickets div.tickets_content {
     display: flex;
@@ -86,10 +97,8 @@
     height: 95%;
     border-radius: var(--size-border-radius-medium);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid var(--color-neutral-light);
-
-
-
+    border: 1px solid var(--color-neutral-medium);
+    background-color: var(--color-neutral-light);
 }
 
 .tickets div article img {
@@ -112,8 +121,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--color-neutral);
     padding: var(--spacing-xx-lg);
+    background-image: url("../../assets/images/background2.png");
+    background-size: cover;
+    width: 100%;
+    padding-top: var(--spacing-xxx-lg);
+;
 }
 
 .pya div.subheading {
@@ -124,6 +137,19 @@
     padding-bottom: var(--spacing-x-lg);
     margin-bottom: var(--spacing-xx-lg);
     width: 100%;
+}
+
+.pya div.subheading h5 {
+  color: var(--color-neutral-light);
+}
+
+.pya div.subheading h2 {
+  color: var(--color-neutral);
+}
+
+.pya div.subheading p {
+  color: var(--color-neutral);
+  max-width: 66ch;
 }
 
 .pya div {
@@ -146,12 +172,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: var(--spacing-xx-lg);
     width: 28ch;
     padding: var(--spacing-xx-lg);
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid var(--color-neutral-light);
+    border: 1px solid var(--color-neutral-medium);
+    border-radius: var(--size-border-radius-medium);
+    background-color: var(--color-neutral-light);
 }
 
 .pya div.pya_content article div {
@@ -174,8 +201,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--color-neutral);
     padding: var(--spacing-xx-lg);
+    width: 100%;
+    background: var(--color-neutral-medium);
+    padding-top: var(--spacing-xxx-lg);
 }
 
 .testimonials div.subheading {
@@ -186,6 +215,10 @@
     padding-bottom: var(--spacing-x-lg);
     margin-bottom: var(--spacing-xx-lg);
     width: 100%;
+}
+
+.testimonials div.subheading h2 {
+  color: var(--color-secondary);
 }
 
 .testimonials div.testimonials_content {
@@ -205,15 +238,16 @@
     padding: var(--spacing-xx-lg);
     transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid var(--color-neutral-light);
+    border: 1px solid var(--color-neutral-medium);
+    background-color: var(--color-neutral-light);
 }
 
-.testimonials div.testimonials_content article .card_picture {
-    background-color: var(--color-neutral-light);
-    color: var(--color-neutral);
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
+
+
+.testimonials div.testimonials_content article .card_picture img {
+  border-radius: 50%;
+  max-width: 100px;
+
 }
 
 .testimonials div.testimonials_content article .card_body {
@@ -298,6 +332,13 @@
       grid-template-columns: 1fr;
     }
 
+    footer {
+      flex-direction: column;
+    }
+    footer div:nth-child(2) {
+      text-align: center;
+    }
+
 
 
      
@@ -307,7 +348,11 @@
   @media (max-width: 767.98px) {
 
     #hero {
+    }
 
+    #pya,
+    #testimonials {
+      width: 100%;
     }
 
     .tickets div.tickets_content,
@@ -316,10 +361,30 @@
       grid-template-columns: 1fr;
     }
 
+    .pya div.pya_content article,
+    .testimonials div.testimonials_content article {
+      width: 100%;
+    }
+
+
+
+    footer {
+      flex-direction: column;
+    }
+    footer div:nth-child(2) {
+      text-align: center;
+    }
+
    }
   
   /* Medium devices (tablets, less than 992px) */
   @media (max-width: 991.98px) { 
+
+
+
+
+
+
 
 
   }

@@ -37,7 +37,6 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
-    /*height: 100vh;*/
     width: inherit;
     height: 100%;
   }
@@ -68,7 +67,8 @@
         
     h3 {
     font-size: var(--font-size-h3);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
     }
     
     h4 {

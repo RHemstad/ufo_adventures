@@ -11,6 +11,8 @@ header {
     justify-content: space-between;
     flex-direction: row;
     min-height: 65px;
+    max-height: 65px;
+    height: 65px;
   }
   
   /* **** Logo ***** 

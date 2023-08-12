@@ -5,9 +5,13 @@ import {Link} from "react-router-dom";
 import Button from '../button/Button';
 
 
+
 import ufo from '../../assets/images/ufo.svg';
 import standard_package from '../../assets/images/standard_package.png';
 import vip_package from '../../assets/images/vip_package.png';
+import testimonial1 from '../../assets/images/testimonial1.png';
+import testimonial2 from '../../assets/images/testimonial2.png';
+import testimonial3 from '../../assets/images/testimonial3.png';
 
 
 const Home = () => {
@@ -24,14 +28,6 @@ const Home = () => {
 </div>
 
 <section id="hero" className="hero">
-
-
-
-
-
-
-
-
 
     <article>
         <h5>ONE WEEKEND ONLY</h5>
@@ -157,15 +153,15 @@ const Home = () => {
 
 <div className="testimonials_content">
   <article className="card">
-        <div className="card_picture">picture</div>
+        <div className="card_picture"><img src={testimonial3} alt="Richard Anderson"/></div>
         <div className="card_body">
-          <p className="card_text">"Nothing could have prepared me for this awe-inspiring experience. The Standard Abduction Package offered a genuine and authentic encounter with their friendly alien hosts."</p>
+          <p className="card_text">"Nothing could have prepared me for this awe-inspiring experience. The Standard Abduction Package offered a genuine and authentic encounter with their alien hosts."</p>
          <cite title="Source Title">Richard Anderson, <br></br>Retired Aerospace Engineer</cite>
         </div>
   </article>
 
   <article className="card">
-        <div className="card_picture">picture</div>
+        <div className="card_picture"><img src={testimonial1} alt="Alex Johnson"/></div>
         <div className="card_body">
           <p className="card_text">"It was an unparalleled adventure that has ignited my creativity and expanded my understanding of the cosmos. UFO Adventures is a dream come true for any cosmic enthusiasts!"</p>
          <cite title="Source Title">Alex Johnson, <br></br>Science Fiction Writer</cite>
@@ -173,7 +169,7 @@ const Home = () => {
   </article>
 
   <article className="card">
-        <div className="card_picture">picture</div>
+        <div className="card_picture"><img src={testimonial2} alt="Sarah Thompson"/></div>
         <div className="card_body">
           <p className="card_text">"I was a skeptic at first, but, it was a mind-blowing experience that I will cherish forever. UFO Adventures truly offers an unforgettable journey to the stars!"</p>
          <cite title="Source Title">Sarah Thompson, <br></br>Astrophysics Enthusiast</cite>
