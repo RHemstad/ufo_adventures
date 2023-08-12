@@ -4,6 +4,8 @@ div.subheading {
     align-items: center;
     justify-content: center;
     padding-bottom: var(--spacing-x-lg);
+    padding-top: var(--spacing-x-lg);
     margin-bottom: var(--spacing-xx-lg);
+    border-bottom: 1px solid var(--color-neutral-light);
     width: 100%;
 }

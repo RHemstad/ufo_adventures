@@ -49,6 +49,7 @@
     background: var(--color-neutral-medium);
     padding: var(--spacing-xx-lg);
     padding-top: var(--spacing-xxx-lg);
+    width: 100%;
 }
 
 #tickets div:first-child {

@@ -46,7 +46,7 @@
      --size-border-radius-full: 50%;
      --size-border-radius-small: 1px;
      --size-border-radius-medium: 4px;
-     --size-border-radius-large: 80px;
+     --size-border-radius-large: 8px;
    
     /**************** CORE COLOR PALETTE ****************/
 
@@ -59,7 +59,7 @@
     --color-tertiary: #767576;
     --color-alert: red;
     --color-neutral-light: #dddddd; /*#cecccd; /* #6B6E70;*/
-    --color-neutral-medium: #bdbcbd; /* #a5a4a5; /*#959595; /*#767576; /* #474B4F;*/
+    --color-neutral-medium: #d1d0d1; /* #a5a4a5; /*#959595; /*#767576; /* #474B4F;*/
     --color-neutral-dark: #393939; /* #222629;*/
 
 
@@ -96,6 +96,10 @@
 
 /**************** TEXT ****************/
 --color-text: var(--color-primary);
+
+
+/**************** BOX SHADOW ****************/
+--box-shadow-option-1: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1)
 
 
 
