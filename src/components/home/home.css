@@ -208,12 +208,12 @@
     border: 1px solid var(--color-neutral-light);
 }
 
-.testimonials div.testimonials_content article .card_picture {
-    background-color: var(--color-neutral-light);
-    color: var(--color-neutral);
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
+
+
+.testimonials div.testimonials_content article .card_picture img {
+  border-radius: 50%;
+  max-width: 100px;
+
 }
 
 .testimonials div.testimonials_content article .card_body {
