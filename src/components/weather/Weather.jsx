@@ -57,8 +57,9 @@ const Weather = () => {
                 ) : (
                         <div className="main">
                             <div className="input-group">
-                                <label className="locationLabel">Select your abduction site:</label> {/* MAKE THIS 700 FONT WEIGHT*/}
+                                <label className="locationLabel">Select your abduction site:</label> 
                                 {locationOptions.map((location) => (
+                                    <div className="cardStyle">
                                     <label key={location.id} id="option">
                                         <input
                                             type="radio"
@@ -68,7 +69,8 @@ const Weather = () => {
                                             onChange={() => handleLocationChange(location.value)}
                                         />
                                         {location.label}
-                                    </label>
+                                        </label>
+                                    </div>
                                 ))}
                             </div>
 

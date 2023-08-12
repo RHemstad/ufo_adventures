@@ -1,10 +1,21 @@
 .locationLabel {
     font-weight: var(--font-weight-bold )
 }
-#option {
-    list-style: none;
-	padding: 0;
-    max-width: 66ch;
+.cardStyle {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: var(--color-neutral);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	width: calc(100% - 2rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+    margin: var(--spacing-md);
+    max-width: 25ch;
+}
+
+input {
+    margin-right: var(--spacing-x-sm);
 }
 
 /* ul.packing-item {
