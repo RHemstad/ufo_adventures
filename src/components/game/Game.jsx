@@ -237,9 +237,12 @@ function Game() {
       {/* only display the question if you are playing */}
 
       {state.playing === false && Boolean(state.bigCollection.length) && !state.currentQuestion && (
-        <p className="text-center">
+        <div className="play-start">
+        <h4 className="instructions">Instructions: </h4>
+        <p>Prove your mastery of the cosmos by correctly identifying and selecting as many alien species as possible in just thirty seconds!</p>
+        <p>If you get more than three wrong, you're out!</p>
           <button onClick={() => dispatch({ type: "startPlaying" })} className="primary-button">Play Game</button>
-        </p>
+        </div>
       )}
 
       {/* set up the conditions for the game over screen to launch */}

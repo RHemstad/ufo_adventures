@@ -9,7 +9,7 @@
     padding: var(--spacing-x-sm);
 }
 
-section p {
+section .play-start {
     max-width: 42ch;
     text-align: center;
 }
@@ -51,6 +51,11 @@ h4 {
     text-align: center;
     padding-top: var(--spacing-md);
     padding-bottom: var(--spacing-md);
+}
+
+h4.instructions {
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
   .alien-container {
