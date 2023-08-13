@@ -1,6 +1,8 @@
 import React from 'react'
 import './footer.css'
 
+import TermsOfService from "../modal/TermsOfService";
+
 
 const Footer = () => {
   return (
@@ -10,7 +12,8 @@ const Footer = () => {
     {/* ************** FOOTER ******************** */}
     {/* ****************************************** */}
 
-    <footer>&#169; 2023</footer>
+    <footer> 
+    <div>&#169; 2023 UFO Adventures</div><div><TermsOfService /></div></footer>
     
     
     

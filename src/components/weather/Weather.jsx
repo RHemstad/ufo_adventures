@@ -1,6 +1,7 @@
 import "./weather.css";
 import React, { useState } from 'react';
 import WeatherDisplay from './WeatherDisplay';
+import Subheader from '../subheader/Subheader';
 
 const locationOptions = [
     { id: 1, label: 'Dallas, TX', value: 'lat=32.779167&lon=-96.808891' },
@@ -46,7 +47,8 @@ const Weather = () => {
     };
     
     return (
-        <>            
+        <>   
+        <Subheader>Planning Your Abduction</Subheader>         
             <section className="weather">
                 <h3>Check the Weather</h3>
                 {submitted ? (
