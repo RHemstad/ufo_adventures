@@ -1,0 +1,139 @@
+
+#game {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section p {
+    max-width: 42ch;
+    text-align: center;
+}
+
+.gameplayarea {
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+}
+
+.timer {
+    padding-right: var(--spacing-md);
+
+}
+
+.lives-to-lose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lives {
+    color: rgb(219 39 119 / 1);
+}
+
+.lives-lost {
+    color: rgb(252 231 243 / 1);
+}
+
+h4 {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+}
+
+  .alien-container {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  
+  .picBox {
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: var(--size-border-radius-medium);
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  }
+
+  .picBox:hover {
+    border: 8px solid green;
+  }
+  
+  .gameover {
+    color: rgb(255 255 255 / 1);
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 0 solid rgg(229, 231, 235);
+    box-sizing:border-box;
+    color: var(--color-neutral);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    z-index: 10000000;
+  
+  }
+  
+  #game a {
+    color: var(--color-neutral);
+  }
+  
+  #game a:active {
+    color: var(--color-neutral);
+  }
+  
+  #game a:hover {
+    color: var(--color-link-color-neutral);
+    text-decoration: underline;
+  }
+  
+  #game a:visited {
+    color: var(--color-neutral)
+  }
+
+  .high-score {
+    margin-bottom: var(--spacing-xxx-lg);
+  }
+
+  .scorestuff {
+    font-size: 3.75rem;
+    font-weight: var(--font-weight-bold);
+      margin-bottom: 1rem
+  }
+
+  .gameover h2,
+  .gameover h3 {
+    color: white;
+  }
+
+  .gameover h3 {
+    margin-bottom: 0;
+  }
+
+  .end-game {
+    font-size: 80%;
+  }
+  
+  .points {
+    color: yellow;
+  }
+  
+  

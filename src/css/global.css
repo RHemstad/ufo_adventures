@@ -134,3 +134,21 @@
     font-size: calc(16px + 2 * ((100vw - 320px) / 680));
   }
 }
+
+a {
+  color: var(--color-link-normal);
+}
+
+a:active {
+  color: var(--color-link-active);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+a:visited {
+  color: var(--color-link-normal)
+}
+
+

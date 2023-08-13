@@ -38,3 +38,5 @@ You might also need to do the following when you first clone the site and you tr
 
 `npm install --save react-modal`
 
+`npm install immer use-immer`
+

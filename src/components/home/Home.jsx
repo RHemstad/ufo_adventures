@@ -100,12 +100,14 @@ const Home = () => {
 
 <article>
 <div>
-<h3>Learn To Recognize UFOs</h3>
-<p>Can you spot the real UfOs from the fakes? Take on the UFO identity challenge and prove your mastery of the skies!  Sharpen your UFO-spotting abilities and become a certified extraterrestrial investigator!</p>
+<h3>Alien Species Identification Game</h3>
+<p>Can you correctly identify as many alien species as possible in just thirty seconds? Sharpen your intergalactic instincts and race against the clock to prove your mastery of the cosmos and become the ultimate Alien Species Identifier!</p>
 </div>
 
 <div>
+<Link to="/game">
 <Button className="primary-button">Select</Button>
+</Link>
 </div>
 </article>
 
