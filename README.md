@@ -40,3 +40,7 @@ You might also need to do the following when you first clone the site and you tr
 
 `npm install immer use-immer`
 
+
+The game won't load the data when you are on localhost without using Cors 
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+

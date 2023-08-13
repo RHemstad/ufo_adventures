@@ -18,9 +18,9 @@ function onlyUniqueAliens(pics) {
   //filter out the duplicates
   //we are using 4 pics per question so need a multiple of 4 total in array
   const uniquePics = pics.filter(pic => {
-    //the pattern from the data for where the dog alien name comes from in the image url
+    //the pattern from the data for where the alien name comes from in the image url
     const alien = pic.split("/")[4]
-    //only if the current dog alien is not already in the array and the url does not have a space in it
+    //only if the current alien is not already in the array and the url does not have a space in it
     if (!uniqueAliens.includes(alien) && !pic.includes(" ")) {
       uniqueAliens.push(alien)
       return true
@@ -157,15 +157,15 @@ function Game() {
   }, [dispatch, state.playing])
 
 
-  //**** GET THE DATA FROM THE DOG API */
+  //**** GET THE DATA FROM THE ALIEN API */
   //**** NOT USING AXIOS - JUST USING FETCH */
   //****  */
   useEffect(() => {
     const reqController = new AbortController()
 
     async function go() {
-      try { //https://bexology.com/species.json https://dog.ceo/api/breeds/image/random/50
-        const picsPromise = await fetch('https://dog.ceo/api/breeds/image/random/50', { signal: reqController.signal })
+      try {
+        const picsPromise = await fetch('https://bexology.com/species.json', { signal: reqController.signal })
         
         const pics = await picsPromise.json();
         //console.log(pics.message);
@@ -249,7 +249,7 @@ function Game() {
 
           <div>
             {state.timeRemaining <= 0 && <h2>Time's Up!</h2>}
-            {state.strikes >= 3 && <h5>3 Strikes; You're Out!</h5>}
+            {state.strikes >= 3 && <h3>3 Strikes; You're Out!</h3>}
 
             <h3 className="scorestuff">Your score:{" "}
               <span className="points">{state.points}</span>
