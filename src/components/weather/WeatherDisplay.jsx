@@ -16,7 +16,7 @@ const WeatherDisplay = ({ weatherData }) => {
             <p>Weather: {weatherData.weather[0].description}</p>
           </div>
           <div className='weatherIcon_div'>
-
+            
           </div>
         </>
       )}
