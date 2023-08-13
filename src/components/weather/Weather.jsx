@@ -1,62 +1,88 @@
 import "./weather.css";
 import React, { useState } from 'react';
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import WeatherDisplay from './WeatherDisplay';
 
-const url = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid={API key}`;
-
-const api = axios.create({
-    baseURL: url
-});
-
-const options = [
-    { id: 1, label: 'Dallas,TX', lat: '32.779167', lon: '-96.808891' },
-    { id: 2, label: 'Los Angeles, CA', lat: '34.052235', lon: '118.243683' },
-    { id: 3, label: 'Vancouver, WA', lat: '45.6387281', lon: '122.66148609999999' },
-    { id: 4, label: 'Washington, DC', lat: '-77.0364', lon: '38.8951' },
-    { id: 5, label: 'Albuquerque, NM', lat: '35.106766', lon: '-106.629181' },
-    { id: 6, label: 'Dixon, MT', lat: '47.3165963', lon: '-114.3140075' }
+const locationOptions = [
+    { id: 1, label: 'Dallas, TX', value: 'lat=32.779167&lon=-96.808891' },
+    { id: 2, label: 'Los Angeles, CA', value: 'lat=34.052235&lon=-118.243683' },
+    { id: 3, label: 'Vancouver, WA', value: 'lat=45.6387281&lon=-122.66148609999999' },
+    { id: 4, label: 'Washington, DC', value: 'lat=38.8951100&lon=-77.0363700' },
+    { id: 5, label: 'Albuquerque, NM', value: 'lat=35.106766&lon=-106.629181' },
+    { id: 6, label: 'The Uintah Basin, UT (aka Skinwalker Ranch)', value: 'lat=40.258901595300905&lon=-109.8929713505666' }
 ];
 
-
+const API_KEY = '8c3d5b5fd86452ccea0e33353f2211a4';
+const API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const Weather = () => {
-    
-    const [selectedOption, setSelectedOption] = useState(null);
 
-    const handleOptionChange = (event) => {
-        setSelectedOption(Number(event.target.value));
+    const [selectedLocation, setSelectedLocation] = useState(null);
+    const [weatherData, setWeatherData] = useState(null);
+    const [submitted, setSubmitted] = useState(false);
+    const fetchWeatherData = async () => {
+        try {
+            const response = await fetch(`${API_BASE_URL}?${selectedLocation}&appid=${API_KEY}&units=imperial`);
+            const data = await response.json();
+            setWeatherData(data);
+            setSubmitted(true);
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+            setWeatherData(null);
+            setSubmitted(false);
+        }
     };
     
-    const handleSubmit = (event) => {
+    const handleLocationChange = (location) => {
+        setSelectedLocation(location);
+    };
 
-        event.preventDefault();
+    const handleSearch = () => {
+        fetchWeatherData();
+    };
 
-        if (selectedOption !== null) {
-            // Make API call with selected option
-            console.log('API call with selected option:', selectedOption);
-        } 
+    const handleChangeLocation = () => {
+        setSubmitted(false);
+        setWeatherData(null);
     };
     
     return (
-      
-        <>
-            
-        
-            <h3>Check the Weather</h3>
+        <>            
+            <section className="weather">
+                <h3>Check the Weather</h3>
+                {submitted ? (
+                    <div>
+                        <WeatherDisplay weatherData={weatherData} />
+                        <button onClick={handleChangeLocation} className="primary-button">Change Location</button>
+                    </div>
+                ) : (
+                        <div className="main">
+                            <div className="input-group">
+                                <label className="locationLabel">Select your abduction site:</label> 
+                                {locationOptions.map((location) => (
+                                    <div className="cardStyle">
+                                    <label key={location.id} id="option">
+                                        <input
+                                            type="radio"
+                                            name="location"
+                                            value={location.value}
+                                            checked={selectedLocation === location.value}
+                                            onChange={() => handleLocationChange(location.value)}
+                                        />
+                                        {location.label}
+                                        </label>
+                                    </div>
+                                ))}
+                            </div>
 
+                            <button onClick={handleSearch} disabled={!selectedLocation} className="primary-button">
+                                Search
+                            </button>
 
-
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="locations"></label>
-                <input type="radio" name="locations" id="locations" />
-                <button class="primary-button" type="submit">Select</button>
-            </form>
-        
-
+                        </div>
+                )}
+            </section>
         </>
-
-  )
+    )
 }
 
 export default Weather
