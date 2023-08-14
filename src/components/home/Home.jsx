@@ -7,7 +7,7 @@ import Hero from '../hero/Hero';
 
 
 
-
+import ufo from '../../assets/images/ufo.svg';
 import standard_package from '../../assets/images/standard_package.png';
 import vip_package from '../../assets/images/vip_package.png';
 import testimonial1 from '../../assets/images/testimonial1.png';
@@ -18,6 +18,8 @@ import testimonial3 from '../../assets/images/testimonial3.png';
 const Home = () => {
   return (
     <>
+
+
 
 <Hero/>
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import Button from '../button/Button';
-import ufo from '../../assets/images/ufo.svg';
 import './hero.css';
+import ufo from '../../assets/images/ufo.svg';
 
 const Hero = () => {
   return (
@@ -11,9 +11,13 @@ const Hero = () => {
 {/* ****************************************** */} 
 {/* **************** HERO  ******************* */} 
 {/* ****************************************** */} 
+
+{/*
 <div id="animation">
 <div id="ufo" className="x"><img className="y" src={ufo} alt="spaceship"/></div>
 </div>
+  */}
+
 
 <section id="hero" className="hero">
 
