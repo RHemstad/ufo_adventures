@@ -29,7 +29,12 @@ padding: var(--spacing-x-sm);
 
 .timer {
     padding-right: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
 
+}
+
+.time-left {
+    padding-right: var(--spacing-x-sm);
 }
 
 .lives-to-lose {
@@ -53,10 +58,17 @@ h4 {
     padding-bottom: var(--spacing-md);
 }
 
+.gameplayarea h4.question {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
 h4.instructions {
     padding-bottom: 0;
     padding-top: 0;
 }
+
+
 
   .alien-container {
     display: flex;
