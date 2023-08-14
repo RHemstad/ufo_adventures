@@ -49,7 +49,7 @@ const Weather = () => {
     return (
         <>   
         <Subheader>Planning Your Abduction</Subheader>         
-            <section className="weather">
+            <section className="weather" id="weather">
                 <h3>Check the Weather</h3>
                 {submitted ? (
                     <div>

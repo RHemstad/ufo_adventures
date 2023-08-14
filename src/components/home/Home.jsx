@@ -3,10 +3,11 @@ import "./home.css";
 import React from 'react';
 import {Link} from "react-router-dom";
 import Button from '../button/Button';
+import Hero from '../hero/Hero';
 
 
 
-import ufo from '../../assets/images/ufo.svg';
+
 import standard_package from '../../assets/images/standard_package.png';
 import vip_package from '../../assets/images/vip_package.png';
 import testimonial1 from '../../assets/images/testimonial1.png';
@@ -18,31 +19,7 @@ const Home = () => {
   return (
     <>
 
-
-
-{/* ****************************************** */} 
-{/* **************** HERO  ******************* */} 
-{/* ****************************************** */} 
-<div id="animation">
-<div id="ufo" className="x"><img className="y" src={ufo} alt="spaceship"/></div>
-</div>
-
-<section id="hero" className="hero">
-
-    <article>
-        <h5>ONE WEEKEND ONLY</h5>
-        <h2>Your Unforgettable Alien Abduction Awaits!</h2>
-
-        <p>Experience the ultimate adventure with UFO Adventures – an authentic Alien abduction awaits you! Choose from our Standard or VIP Abduction Packages and step into a world beyond imagination.</p>
-
-        <Link to="/tickets">
-        <Button className="primary-button">Join Today</Button>
-        </Link>
-    </article>
-
-
-</section>
-
+<Hero/>
 
 
 {/* ****************************************** */} 
@@ -106,11 +83,11 @@ const Home = () => {
 
 <article>
 <div>
-<h3>Alien Species Identification Game</h3>
+<h3>Alien Identification Game</h3>
 <p>Can you correctly identify as many alien species as possible in just thirty seconds? Sharpen your intergalactic instincts and race against the clock to prove your mastery of the cosmos and become the ultimate Alien Species Identifier!</p>
 </div>
 
-<div>
+<div class="call-to-action">
 <Link to="/game">
 <Button className="primary-button">Select</Button>
 </Link>
@@ -122,7 +99,7 @@ const Home = () => {
 <h3>Weather Checking Tool</h3>
 <p>Plan your abduction with confidence by checking the weather on the day and location of your scheduled encounter. Stay informed and be ready to explore the cosmos, rain or shine!</p>
 </div> 
-<div>         
+<div class="call-to-action">         
             <Link to="/weather">
               <Button className="primary-button">Select</Button>
             </Link>
@@ -134,7 +111,7 @@ const Home = () => {
 <h3>Packing Checklist</h3>
 <p>From space-age essentials to cosmic curiosities, we've got you covered. Get ready for the journey of a lifetime – check off your packing list now and gear up for an out-of-this-world experience!</p>
 </div>
-<div>
+<div class="call-to-action">
 <Link to="/packingchecklist">
         <Button className="primary-button">Select</Button>
         </Link>

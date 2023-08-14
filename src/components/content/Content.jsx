@@ -8,6 +8,8 @@ import PackingChecklist from "../packing_checklist/PackingChecklist";
 import Weather from "../weather/Weather"
 import Game from "../game/Game"
 
+import background from '../../assets/images/background.svg';
+
 
 const Content = () => {
   return (
