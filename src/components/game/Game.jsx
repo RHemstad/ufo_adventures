@@ -186,7 +186,7 @@ function Game() {
   return (
     <>
     <section id="game">
-    <Subheader bigtitle="yo" smalltitle='Uep'>Planning Your Abduction: </Subheader>
+    <Subheader>Planning Your Abduction: </Subheader>
     
     <h3>Alien Species Identification Game</h3>
 

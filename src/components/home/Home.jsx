@@ -65,7 +65,9 @@ const Home = () => {
 </div>
 
 <div>
-<Button className="primary-button" to="/tickets">Purchase Tickets</Button>
+<Link to="/tickets">
+<Button className="primary-button">Purchase Tickets</Button>
+</Link>
 </div>
 
 </article>
@@ -77,7 +79,11 @@ const Home = () => {
 <p>The VIP Abduction Package offers an unparalleled interstellar experience beyond your wildest dreams. As a privileged voyager, you'll be treated to exclusive encounters with our advanced extraterrestrial hosts, gaining insights into their culture and technology. But that's not all - you'll also have the unique opportunity to participate in groundbreaking scientific experiments</p>
 </div>
 <div>
-<Button className="primary-button" to="/tickets">Purchase Tickets</Button>
+
+<Link to="/tickets">
+<Button className="primary-button">Purchase Tickets</Button>
+</Link>
+
 </div>
 </article>
 

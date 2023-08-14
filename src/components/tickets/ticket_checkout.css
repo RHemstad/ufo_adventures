@@ -1,0 +1,83 @@
+
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.text-danger {
+
+}
+
+.input-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+}
+
+.input-area {
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    background-color: var(--color-neutral);
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: var(--size-border-radius-small);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 50%;
+}
+
+span {
+    color: var(--color-alert);
+}
+
+.input-area.grow {
+    flex-grow: 1;
+}
+
+.input-area.grow input {
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    padding-right: .5rem;
+    width: 100%;
+}
+
+input {
+    margin: 0;
+    font-family: inherit;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-weight: 400;
+
+    color: var(--color-primary);
+    background-color: var(--color-neutral);
+    background-clip: padding-box;
+    border: 1px solid var(--color-neutral-dark);
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: var(--size-border-radius-small);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.payment-type {
+    padding: var(--spacing-sm);
+    display: flex;
+    justify-content: flex-end;
+}
+
+fieldset {
+    border-width: 0;
+}
+
+
+
