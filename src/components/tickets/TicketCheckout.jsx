@@ -75,7 +75,7 @@ const TicketCheckout = () => {
     
     <Subheader>Purchase Tickets: </Subheader>
     
-    <form id="form" className="checkout">
+    <form id="ticket-form" className="checkout">
         <fieldset>
 
         <h4>Billing Information</h4>

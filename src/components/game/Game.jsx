@@ -200,9 +200,8 @@ function Game() {
 
         <div className="scoreboard">
             <div className="timer">
-                <span className="text-zinc-400 mr-3">Time Remaining:
-                <span className="timer">0:{state.timeRemaining < 10 ? "0" + state.timeRemaining : state.timeRemaining}</span>
-                </span>
+                <span className="time-left">Time Remaining:</span>
+                <span className="timer-count">0:{state.timeRemaining < 10 ? "0" + state.timeRemaining : state.timeRemaining}</span>
             </div>
 
             <div className="lives-to-lose">
@@ -218,7 +217,7 @@ function Game() {
         </div>
 
           {/* WHAT ALIEN YOU NEED TO IDENTIFY */}
-          <h4>Which alien is the {state.currentQuestion.alien}?</h4>
+          <h4 className="question">Which alien is the {state.currentQuestion.alien}?</h4>
 
           {/* THE IMAGES YOU NEED TO PICK FROM */}
           <div className="alien-container">
