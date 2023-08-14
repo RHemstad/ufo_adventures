@@ -12,7 +12,8 @@ const PackingChecklist = () => {
   return (
     <>
     
-    <Subheader bigtitle="yo" smalltitle='Uep'>Subheader is failing here</Subheader>
+    <Subheader>Planning Your Abduction: </Subheader>
+    
     
     <h3>Packing Checklist</h3>
 
