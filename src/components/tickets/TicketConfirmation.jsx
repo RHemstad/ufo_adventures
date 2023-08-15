@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState, createContext} from 'react'
 
-const TicketConfirmation = (firstname) => {
+
+const TicketConfirmation = () => {
+
+
   return (
     <>
 
     WOOT - got this far
+
 
     </>
   )

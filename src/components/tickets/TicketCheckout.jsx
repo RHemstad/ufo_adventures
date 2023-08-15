@@ -1,79 +1,72 @@
+
 import './ticket_checkout.css';
-import React, {useEffect, useState} from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import React, {useState} from 'react';
 import Subheader from '../subheader/Subheader.jsx';
-import swal from 'sweetalert';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import * as yup from 'yup' // importing functions from yup library
+
+import { useUpdateFirstName, useUpdateLastName, useUpdatePhone, useUpdateEmail, useUpdateAddress, useUpdateCity, useUpdateState, useUpdateZipcode } from "./TicketContextProvider";
+import { useFirstName, useLastName, usePhone, useEmail, useAddress, useCity, useState, useZipcode } from "./TicketContextProvider";
 
 
 const TicketCheckout = () => {
 
-    const navigate = useNavigate();
-    const form = document.getElementById('form');
+const navigate = useNavigate();
 
-    const [checkoutInput, setCheckoutInput] = useState({
-        firstname: '',
-        lastname: '',
-        phone: '',
-        email: '',
-        address: '',
-        city: '',
-        state: '',
-        zipcode: '',
-    });
+const updateFirstName = useUpdateFirstName();
+const firstName = useFirstName();
+let [newFirstName, setNewFirstName] = useState(firstName) ;
 
-    const [error, setError] = useState([]);
+const updateLastName = useUpdateLastName();
+const lastName = useLastName();
+let [newLastName, setNewLastName] = useState(lastName) ;
 
-    const handleInput = (e) => {
-        e.persist();
-        setCheckoutInput({...checkoutInput, [e.target.firstname]: e.target.value });
-        console.log("made it to handleInput");
-    }
+const updatePhone = useUpdatePhone();
+const phone = usePhone();
+let [newPhone, setNewPhone] = useState(phone) ;
 
-    //form.addEventListener('submit', async (e) => {
-    const submitOrder = (e) => {
-        e.preventDefault();
-        console.log("made it to submit order");
+const updateEmail = useUpdateEmail();
+const email = useEmail();
+let [newEmail, setNewEmail] = useState(email) ;
 
-        //const formData = new FormData(form);
+const updateAddress = useUpdateAddress();
+const address = useAddress();
+let [newAddress, setNewAddress] = useState(address) ;
 
-        let data = {
-            firstname: checkoutInput.firstname,
-            lastname: checkoutInput.lastname,
-            phone: checkoutInput.phone,
-            email: checkoutInput.email,
-            address: checkoutInput.address,
-            city: checkoutInput.city,
-            state: checkoutInput.state,
-            zipcode: checkoutInput.zipcode
-        }
+const updateCity = useUpdateCity();
+const city = useCity();
+let [newCity, setNewCity] = useState(city) ;
 
-        axios.post('https://httpbin.org/post', data)
-        //.then(res => console.log(res))
-        //.catch(err => console.log(err));
+const updateState = useUpdateState();
+const state = useState();
+let [newState, setNewState] = useState(state) ;
 
-        .then(res=> {
-            console.log(res);
-            //set up form validation of some kind to handle empty form submission etc
-                 setError(res.data.errors);
-                 //alert('All fields are mandatory');
-                navigate('/ticketconfirmation');
+const updateZipcode = useUpdateZipcode();
+const zipcode = useZipcode();
+let [newZipcode, setNewZipcode] = useState(zipcode) ;
 
-        })
-        .catch(err => console.log(`HOUSTON WE HAVE A PROBLEM WITH THE FORM ${err}`));
 
-    
-        //set up form validation error handling
-        console.log('got here');
-    };
+  const onUpdateCheckout = (e) => {
+    e.preventDefault();
+    updateFirstName(newFirstName);
+    updateLastName(newLastName);
+    updatePhone(newPhone);
+    updateEmail(newEmail);
+    updateAddress(newAddress);
+    updateCity(newCity);
+    updateState(newState);
+    updateZipcode(newZipcode);
 
+    navigate('/')
+
+  };
 
   return (
     <>
     
-    <Subheader>Purchase Tickets: </Subheader>
+        
+<Subheader>Purchase Tickets: </Subheader>
     
     <form id="ticket-form" className="checkout">
         <fieldset>
@@ -89,8 +82,8 @@ const TicketCheckout = () => {
 
                 <div className="input-area">
                     <label> First Name <span aria-label="required">*</span></label>
-                    <input type="text" name="firstname" onChange={handleInput} value={checkoutInput.firstname} className="form-control" required />
-                    <small className="text-danger">{error.firstname}</small>
+                    <input type="text" name="firstName" value={newFirstName} onChange={(e) => setNewFirstName(e.target.value)} className="form-control" required />
+
                 </div>
 
 
@@ -98,8 +91,8 @@ const TicketCheckout = () => {
 
             <div className="input-area">
                     <label> Last Name <span aria-label="required">*</span></label>
-                    <input type="text" name="lastname" onChange={handleInput} value={checkoutInput.lastname} className="form-control" required />
-                    <small className="text-danger">{error.lastname}</small>
+                    <input type="text" name="lastname" value={newLastName} onChange={(e) => setNewLastName(e.target.value)} className="form-control" required />
+
                 </div>
 
             </div>
@@ -112,17 +105,16 @@ const TicketCheckout = () => {
 
             {/* ***** PHONE NUMBER ***** */}
                 <div className="input-area">
-                    <label> Phone Number <span aria-label="required">*</span></label>
-                    <input type="number" name="phone" onChange={handleInput} value={checkoutInput.phone} className="form-control" required />
-                    <small className="text-danger">{error.phone}</small>
+                    <label>Phone Number <span aria-label="required">*</span></label>
+                    <input type="number" name="phone" value={newPhone} onChange={(e) => setNewPhone(e.target.value)} className="form-control" required />
+
                 </div>
 
                 {/* ***** EMAIL ADDRESS ***** */}
 
                 <div className="input-area">
-                    <label> Email Address <span aria-label="required">*</span></label>
-                    <input type="email" name="email" onChange={handleInput} value={checkoutInput.email} className="form-control" required />
-                    <small className="text-danger">{error.email}</small>
+                    <label>Email Address <span aria-label="required">*</span></label>
+                    <input type="email" name="email" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} className="form-control" required />
                 </div>
 
 
@@ -137,8 +129,8 @@ const TicketCheckout = () => {
 
                 <div className="input-area grow">
                     <label>Street Address <span aria-label="required">*</span></label>
-                    <input name="address" onChange={handleInput} value={checkoutInput.address} className="form-control" required></input>
-                    <small className="text-danger">{error.address}</small>
+                    <input name="address" value={newAddress} onChange={(e) => setNewAddress(e.target.value)} className="form-control" required></input>
+
                 </div>
 
             </div>
@@ -151,8 +143,8 @@ const TicketCheckout = () => {
                 {/* ***** CITY ***** */}
                 <div className="input-area">
                     <label>City <span aria-label="required">*</span></label>
-                    <input type="text" name="city" onChange={handleInput} value={checkoutInput.city} className="form-control" required />
-                    <small className="text-danger">{error.city}</small>
+                    <input type="text" name="city" value={newCity} onChange={(e) => setNewCity(e.target.value)} className="form-control" required />
+    
                 </div>
 
 
@@ -160,8 +152,8 @@ const TicketCheckout = () => {
 
                 <div className="input-area">
                     <label>State <span aria-label="required">*</span></label>
-                    <input type="text" name="state" onChange={handleInput} value={checkoutInput.state} className="form-control" required />
-                    <small className="text-danger">{error.state}</small>
+                    <input type="text" name="state" value={newState} onChange={(e) => setNewState(e.target.value)} className="form-control" required />
+
                 </div>
 
 
@@ -169,8 +161,8 @@ const TicketCheckout = () => {
 
                 <div className="input-area">
                     <label>Zip Code <span aria-label="required">*</span></label>
-                    <input type="text" name="zipcode" onChange={handleInput} value={checkoutInput.zipcode} className="form-control" required />
-                    <small className="text-danger">{error.zipcode}</small>
+                    <input type="text" name="zipcode" value={newZipcode} onChange={(e) => setNewZipcode(e.target.value)} className="form-control" required />
+
                 </div>
 
 
@@ -181,20 +173,21 @@ const TicketCheckout = () => {
 
                              {/* ***** PAYMENT TYPE ***** */}
                                 <div className="payment-type"> 
-                                    <button type="button" className="primary-button" onClick={submitOrder}>Place Order</button>
+                                    {/*<button type="button" className="primary-button" onClick={() => {validateForm()}}>Place Order</button>*/}
+                                    <button type="button" className="primary-button" onClick={onUpdateCheckout}>Place Order</button>
                                 </div>
 
 
-    </form>
+    </form> 
+        
 
 
 
-    
-    
-    
-    
-    
-    </>
+        
+
+        
+        
+        </>
   )
 }
 

@@ -8,6 +8,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Content from "./components/content/Content";
 
+
+
 const App = () => {
   return (
     <>
@@ -15,6 +17,9 @@ const App = () => {
     <Header />
     <Content />
     <Footer />
+
+
+
     
     
     </>
