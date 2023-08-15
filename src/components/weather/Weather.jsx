@@ -2,6 +2,7 @@ import "./weather.css";
 import React, { useState } from 'react';
 import WeatherDisplay from './WeatherDisplay';
 import Subheader from '../subheader/Subheader';
+import WeatherImage from "./WeatherImage";
 
 const locationOptions = [
     { id: 1, label: 'Dallas, TX', value: 'lat=32.779167&lon=-96.808891' },
@@ -52,8 +53,14 @@ const Weather = () => {
             <section className="weather" id="weather">
                 <h3>Check the Weather</h3>
                 {submitted ? (
-                    <div>
-                        <WeatherDisplay weatherData={weatherData} />
+                    <div className="display_main">
+                        <div className="display_img">
+                            <WeatherImage weatherData={weatherData} />
+                        </div>
+                        <div className="display_info">
+                            <WeatherDisplay weatherData={weatherData} />
+                        </div>
+                        
                         <button onClick={handleChangeLocation} className="primary-button">Change Location</button>
                     </div>
                 ) : (
