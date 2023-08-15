@@ -10,43 +10,46 @@ import {useFirstName, useLastName, usePhone, useEmail, useAddress, useCity, useC
 
 
 const TicketCheckout = () => {
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const updateFirstName = useUpdateFirstName();
-const firstName = useFirstName();
-let [newFirstName, setNewFirstName] = useState(firstName);
+    const updateFirstName = useUpdateFirstName();
+    const firstName = useFirstName();
+    let [newFirstName, setNewFirstName] = useState(firstName);
 
-const updateLastName = useUpdateLastName();
-const lastName = useLastName();
-let [newLastName, setNewLastName] = useState(lastName);
+    const updateLastName = useUpdateLastName();
+    const lastName = useLastName();
+    let [newLastName, setNewLastName] = useState(lastName);
 
-const updatePhone = useUpdatePhone();
-const phone = usePhone();
-let [newPhone, setNewPhone] = useState(phone);
+    const updatePhone = useUpdatePhone();
+    const phone = usePhone();
+    let [newPhone, setNewPhone] = useState(phone);
 
-const updateEmail = useUpdateEmail();
-const email = useEmail();
-let [newEmail, setNewEmail] = useState(email) ;
+    const updateEmail = useUpdateEmail();
+    const email = useEmail();
+    let [newEmail, setNewEmail] = useState(email);
 
-const updateAddress = useUpdateAddress();
-const address = useAddress();
-let [newAddress, setNewAddress] = useState(address) ;
+    const updateAddress = useUpdateAddress();
+    const address = useAddress();
+    let [newAddress, setNewAddress] = useState(address);
 
-const updateCity = useUpdateCity();
-const city = useCity();
-let [newCity, setNewCity] = useState(city) ;
+    const updateCity = useUpdateCity();
+    const city = useCity();
+    let [newCity, setNewCity] = useState(city);
 
-const updateCheckoutState = useUpdateCheckoutState();
-const checkoutState = useCheckoutState();
-let [newCheckoutState, setNewCheckoutState] = useState(checkoutState) ;
+    const updateCheckoutState = useUpdateCheckoutState();
+    const checkoutState = useCheckoutState();
+    let [newCheckoutState, setNewCheckoutState] = useState(checkoutState);
 
-const updateZipcode = useUpdateZipcode();
-const zipcode = useZipcode();
-let [newZipcode, setNewZipcode] = useState(zipcode) ;
+    const updateZipcode = useUpdateZipcode();
+    const zipcode = useZipcode();
+    let [newZipcode, setNewZipcode] = useState(zipcode);
 
 
   const onUpdateCheckout = (e) => {
     e.preventDefault();
+    console.log("what do I have");
+
+    if(newFirstName !== "") {
 
     updateFirstName(newFirstName);
     updateLastName(newLastName);
@@ -58,6 +61,10 @@ let [newZipcode, setNewZipcode] = useState(zipcode) ;
     updateZipcode(newZipcode);
 
     navigate('/ticketconfirmation')
+
+} else {
+    alert("Please enter a name.")
+  }
 
 
   };
@@ -218,11 +225,11 @@ let [newZipcode, setNewZipcode] = useState(zipcode) ;
 
             </fieldset>
 
-                             {/* ***** PAYMENT TYPE ***** */}
-                                <div className="payment-type"> 
-                                    {/*<button type="button" className="primary-button" onClick={() => {validateForm()}}>Place Order</button>*/}
-                                    <button type="button" className="primary-button" onClick={onUpdateCheckout}>Place Order</button>
-                                </div>
+            {/* ***** PAYMENT TYPE ***** */}
+            <div className="payment-type"> 
+            {/*<button type="button" className="primary-button" onClick={() => {validateForm()}}>Place Order</button>*/}
+            <button type="button" className="primary-button" onClick={onUpdateCheckout}>Place Order</button>
+            </div>
 
 
     </form> 

@@ -16,15 +16,13 @@ export const CheckoutProvider = ({value, children}) => {
     
   return (
 
-<CheckoutContext.Provider value={firstName, lastName, phone, email, address, city, checkoutState, zipcode}>
-      <UpdateCheckoutContext.Provider value={setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode}>
+<CheckoutContext.Provider value={{firstName, lastName, phone, email, address, city, checkoutState, zipcode}}>
+      <UpdateCheckoutContext.Provider value={{setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode}}>
         {children}
       </UpdateCheckoutContext.Provider>
 </CheckoutContext.Provider>
   );
 };
-
-
 
 
 export const useFirstName = () => {

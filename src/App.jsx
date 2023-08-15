@@ -10,7 +10,7 @@ import { CheckoutProvider } from "./components/tickets/TicketContextProvider";
 const App = () => {
   return (
     <>
-    <CheckoutProvider value="">
+    <CheckoutProvider value={""}>
     <Header />
     <Content />
     <Footer />

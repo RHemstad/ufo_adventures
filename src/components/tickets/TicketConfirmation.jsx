@@ -4,14 +4,15 @@ import {useFirstName, useLastName, usePhone, useEmail, useAddress, useCity, useC
 
 const TicketConfirmation = () => {
 
-  const firstName = useFirstName()
-  const lastName = useLastName()
-  const phone = usePhone()
-  const email = useEmail()
-  const address = useAddress()
-  const city = useCity()
-  const zipcode = useZipcode()
-  const checkoutState = useCheckoutState()
+  const firstName = useFirstName();
+  const lastName = useLastName();
+  const phone = usePhone();
+  const email = useEmail();
+  const address = useAddress();
+  const city = useCity();
+  const checkoutState = useCheckoutState();
+  const zipcode = useZipcode();
+
 
 
 
@@ -19,7 +20,7 @@ const TicketConfirmation = () => {
     <>
 
     WOOT - got this far
-{firstName}
+{TicketConfirmation.firstName}
 
     </>
   )
