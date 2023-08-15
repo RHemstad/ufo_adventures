@@ -42,9 +42,25 @@
 }
 
 #img_Drizzle, #img_Thunderstorm, #img_Clouds {
-	background-color: darkblue;
+	background-color: var(--color-weather-1);
 }
 
 #img_Clear{
-	background-color: skyblue;
+	background-color: var(--color-weather-2);
+}
+
+.display_main {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: column;
+}
+
+.display_img img {
+	width: 100%;
+	min-width: 200px;
+	max-width: 400px;
+}
+
+.display_img {
+	flex-grow: 2;
 }

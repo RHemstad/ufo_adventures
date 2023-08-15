@@ -26,7 +26,7 @@ const WeatherImage = ({weatherData}) => {
     return (
         <>
             <div id={'img_' + weatherData.weather[0].main}>
-                <img src={displayImage({weatherData})} alt='img.svg' />
+                <img src={displayImage({weatherData})} alt='Weather Representation' />
             </div>
         </>
     )
