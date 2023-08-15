@@ -2,11 +2,11 @@ import "./content.css";
 import React from 'react'
 import {Route, Routes} from 'react-router-dom'
 import Home from "../home/Home";
-import TicketCheckout from "../tickets/TicketCheckout";
-import TicketConfirmation from "../tickets/TicketConfirmation";
 import PackingChecklist from "../packing_checklist/PackingChecklist";
 import Weather from "../weather/Weather"
 import Game from "../game/Game"
+import TicketConfirmation from "../tickets/TicketConfirmation";
+import TicketCheckout from "../tickets/TicketCheckout";
 
 import background from '../../assets/images/background.svg';
 
