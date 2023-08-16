@@ -10,7 +10,7 @@ const TicketConfirmation = () => {
   return (
     <>
 
-<Subheader>Get Ticket: </Subheader>
+<Subheader>Ticket Confirmed</Subheader>
 
 
 
