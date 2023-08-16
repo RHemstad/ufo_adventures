@@ -10,32 +10,22 @@ const TicketConfirmation = () => {
   return (
     <>
 
-<Subheader>Planning Your Abduction: </Subheader>
+<Subheader>Get Ticket: </Subheader>
 
 
 
     <section id="ticket-confirmation">
-    <h3>Thank You for your Purchase</h3>
+    <h3>Thank You {firstName} for your willingness to be abducted!</h3>
+    <h4>It's victims (er, volunteers), like yourself, that help us learn more about humans.</h4>
 
-    Hello, {firstName}
-    <p>Your order has been confirmed.</p>
-    <p>Your tickets have been emailed to: {email}</p>
-
-    Order Date: {new Date().toLocaleDateString()} <br/>
-    Order Number: {Math.floor(Math.random() * 1000000)} <br/>
-
-    Number of Tickets Ordered: 2;
-    Package Choice:
+<div>
+    <div>Order Date: {new Date().toLocaleDateString()}</div>
+    <div>Order Number: {Math.floor(Math.random() * 1000000)}</div>
+    <div>Location Choice: Dallas</div>
+    <div>Package Choice: VIP Package</div>
+</div>
 
 
-
-    Your Name: {firstName} {lastName} <br/>
-    Phone Number: {phone} <br/>
-    Email: {email} <br/>
-    Address: {address} <br/>
-    City: {city} <br/>
-    Zipcode: {zipcode} <br/>
-    State: {checkoutState} <br/>
 
 
 

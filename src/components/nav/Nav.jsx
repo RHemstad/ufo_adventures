@@ -35,8 +35,9 @@ const Nav = () => {
 
     <ul>
     <li><Link to="/">Home</Link></li>
+    <li><Link to="/tickets">Get Tickets</Link></li>
   <li>{userName !== "" ? `Welcome ${userName}` : <Link to="profile">Sign In</Link>}</li>
-        <li>{userName !== "" &&  <Link onClick={signOutUserName}>Sign Out</Link> }</li>
+  <li>{userName !== "" &&  <Link onClick={signOutUserName}>Sign Out</Link> }</li>
     </ul>
 
 

@@ -43,12 +43,54 @@ const TicketCheckout = () => {
     <>
     
         
-<Subheader>Purchase Tickets: </Subheader>
-    
-    <form id="ticket-form" className="checkout">
-        <fieldset>
+<Subheader>Get Tickets: </Subheader>
 
-        <h4>Billing Information</h4>
+<section className="ticket-checkout">
+<h4>Only one ticket per person.</h4>
+    
+<form id="ticket-form" className="checkout">
+ 
+<fieldset>
+<h4>Select Your Abduction Day</h4>
+ <select class="select">
+ <option value="">--Please choose an option--</option>
+  <option value="sat">Saturday, November 3, 2023</option>
+  <option value="sun">Sunday,  November 4, 2023</option>
+</select>
+</fieldset>
+
+<fieldset>
+<h4>Select Your Abduction Location</h4>
+ <select class="select">
+ <option value="">--Please choose an option--</option>
+  <option value="1">Dallas, TX</option>
+  <option value="2">Los Angeles, CA</option>
+  <option value="3">Vancouver, WA</option>
+  <option value="4">Washington, DC</option>
+  <option value="5">Albuquerque, NM</option>
+  <option value="6">The Uintah Basin</option>
+</select>
+</fieldset>
+
+
+<fieldset className="package-choice">
+<h4>Select Your Abduction Package</h4>
+<div>
+<label class="form-control">
+    <input type="radio" id="radio" name="radio" />
+    Standard Package
+  </label>
+
+  <label class="form-control">
+    <input type="radio" id="radio" name="radio" checked />
+    Vip Package
+  </label>
+  </div>
+</fieldset>
+
+
+<fieldset>
+        <h4>Your Details</h4>
 
             {/* ****************************** */}
             {/* ************ NAME ************ */}
@@ -193,12 +235,12 @@ const TicketCheckout = () => {
             </div>
 
 
-            </fieldset>
 
+</fieldset>
             {/* ***** PAYMENT TYPE ***** */}
             <div className="payment-type"> 
             {/*<button type="button" className="primary-button" onClick={() => {validateForm()}}>Place Order</button>*/}
-            <button type="submit" className="primary-button" onClick={onUpdateCheckout}>Place Order</button>
+            <button type="submit" className="primary-button" onClick={onUpdateCheckout}>Submit</button>
             </div>
 
 
@@ -207,7 +249,7 @@ const TicketCheckout = () => {
 
 
 
-        
+    </section>   
 
         
         

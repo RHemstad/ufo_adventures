@@ -29,7 +29,7 @@ const Home = () => {
 <section id="tickets" className="tickets">
 
 <div className="subheading">
-  <h5>SUPPLIES LIMITED</h5>
+  <h5>LIMITED SEATING</h5>
   <h2>Tickets</h2>
 </div>
 
@@ -43,7 +43,7 @@ const Home = () => {
 
 <div>
 <Link to="/tickets">
-<Button className="primary-button">Purchase Tickets</Button>
+<Button className="primary-button">Get Tickets</Button>
 </Link>
 </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
 <div>
 
 <Link to="/tickets">
-<Button className="primary-button">Purchase Tickets</Button>
+<Button className="primary-button">Get Tickets</Button>
 </Link>
 
 </div>
