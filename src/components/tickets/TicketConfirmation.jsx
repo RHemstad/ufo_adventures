@@ -1,11 +1,11 @@
 import './ticket_confirmation.css';
-import React, {useState, createContext} from 'react'
+import React from 'react'
 import {CheckoutContext} from "./TicketContextProvider"
 import Subheader from '../subheader/Subheader.jsx'
 
 const TicketConfirmation = () => {
 
-  let {firstName, lastName, phone, email, address, city, checkoutState, zipcode, setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode} = React.useContext(CheckoutContext);
+  let {firstName, setEmail} = React.useContext(CheckoutContext);
 
   return (
     <>

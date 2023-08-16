@@ -1,8 +1,6 @@
 import React from 'react'
-import {Link} from "react-router-dom";
-import Button from '../button/Button';
 import './hero.css';
-import ufo from '../../assets/images/ufo.svg';
+
 
 const Hero = () => {
   return (

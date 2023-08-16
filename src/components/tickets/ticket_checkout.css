@@ -15,9 +15,6 @@ section.ticket-checkout > h4 {
 
 
 
-.text-danger {
-}
-
 #ticket-form .input-container {
     display: flex;
     flex: 0 0 auto;
