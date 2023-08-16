@@ -4,8 +4,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Button from '../button/Button';
 import Hero from '../hero/Hero';
-
-
+import { useUserName } from "../profile/UserContextProvider";
 
 import ufo from '../../assets/images/ufo.svg';
 import standard_package from '../../assets/images/standard_package.png';
@@ -16,10 +15,9 @@ import testimonial3 from '../../assets/images/testimonial3.png';
 
 
 const Home = () => {
+ const userName = useUserName();
   return (
     <>
-
-
 
 <Hero/>
 
@@ -31,7 +29,7 @@ const Home = () => {
 <section id="tickets" className="tickets">
 
 <div className="subheading">
-  <h5>SUPPLIES LIMITED</h5>
+  <h5>LIMITED SEATING</h5>
   <h2>Tickets</h2>
 </div>
 
@@ -45,7 +43,7 @@ const Home = () => {
 
 <div>
 <Link to="/tickets">
-<Button className="primary-button">Purchase Tickets</Button>
+<Button className="primary-button">Get Tickets</Button>
 </Link>
 </div>
 
@@ -60,7 +58,7 @@ const Home = () => {
 <div>
 
 <Link to="/tickets">
-<Button className="primary-button">Purchase Tickets</Button>
+<Button className="primary-button">Get Tickets</Button>
 </Link>
 
 </div>
@@ -89,7 +87,7 @@ const Home = () => {
 <p>Can you correctly identify as many alien species as possible in just thirty seconds? Sharpen your intergalactic instincts and race against the clock to prove your mastery of the cosmos and become the ultimate Alien Species Identifier!</p>
 </div>
 
-<div class="call-to-action">
+<div className="call-to-action">
 <Link to="/game">
 <Button className="primary-button">Select</Button>
 </Link>
@@ -101,7 +99,7 @@ const Home = () => {
 <h3>Weather Checking Tool</h3>
 <p>Plan your abduction with confidence by checking the weather on the day and location of your scheduled encounter. Stay informed and be ready to explore the cosmos, rain or shine!</p>
 </div> 
-<div class="call-to-action">         
+<div className="call-to-action">         
             <Link to="/weather">
               <Button className="primary-button">Select</Button>
             </Link>
@@ -113,7 +111,7 @@ const Home = () => {
 <h3>Packing Checklist</h3>
 <p>From space-age essentials to cosmic curiosities, we've got you covered. Get ready for the journey of a lifetime – check off your packing list now and gear up for an out-of-this-world experience!</p>
 </div>
-<div class="call-to-action">
+<div className="call-to-action">
 <Link to="/packingchecklist">
         <Button className="primary-button">Select</Button>
         </Link>

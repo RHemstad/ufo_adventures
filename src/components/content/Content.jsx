@@ -2,11 +2,12 @@ import "./content.css";
 import React from 'react'
 import {Route, Routes} from 'react-router-dom'
 import Home from "../home/Home";
-import TicketCheckout from "../tickets/TicketCheckout";
-import TicketConfirmation from "../tickets/TicketConfirmation";
 import PackingChecklist from "../packing_checklist/PackingChecklist";
 import Weather from "../weather/Weather"
 import Game from "../game/Game"
+import TicketConfirmation from "../tickets/TicketConfirmation";
+import TicketCheckout from "../tickets/TicketCheckout";
+import UpdateProfileName from "../profile/UpdateProfileName";
 
 import background from '../../assets/images/background.svg';
 
@@ -26,6 +27,7 @@ const Content = () => {
       <Route path="/packingchecklist" element={<PackingChecklist />} />
       <Route path="/weather" element={<Weather />} />
       <Route path="/game" element={<Game />} />
+      <Route path="/profile" element={<UpdateProfileName />} />
    </Routes>
 
 

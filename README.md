@@ -40,7 +40,7 @@ You might also need to do the following when you first clone the site and you tr
 
 `npm install immer use-immer`
 
-`npm install --save sweetalert`
+`npm install yup`
 
 npm install express express-fileupload 
 

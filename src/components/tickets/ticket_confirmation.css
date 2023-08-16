@@ -1,0 +1,11 @@
+
+#ticket-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ticket-confirmation h4 {
+    margin-top: 0;
+    padding-top: 0;
+}

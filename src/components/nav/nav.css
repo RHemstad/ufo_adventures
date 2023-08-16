@@ -92,6 +92,9 @@ nav {
 .menu > ul li {
   margin: 0 1rem;
   overflow: hidden;
+  color: var(--color-neutral);
+  display: flex;
+  align-items: center;
 }
 
 .menu a {
@@ -159,7 +162,7 @@ nav {
   }
 
   #menu-toggle:checked ~ .menu ul li {
-    border: 1px solid #333;
+    border: 1px solid var(--color-primary);
     /*height: 2.5rem;
     padding: 0.5rem;*/
     height: inherit;
@@ -173,10 +176,22 @@ nav {
     justify-content: center;
     margin: 0;
     width: 100%;
-    background-color: #222;
+    background-color: var(--color-secondary);
   }
 
+  .menu > ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu > ul li a:active {
+    background-color: var(--color-secondary);
+  }
+
+
+
   .menu > ul li:not(:last-child) {
-    border-bottom: 1px solid #444;
+    /*border-bottom: 1px solid var(--color-neutral);*/
   }
 }
