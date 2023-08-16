@@ -13,10 +13,7 @@ const PackingChecklist = () => {
     <>
     
     <Subheader>Planning Your Abduction: </Subheader>
-    
-    
     <h3>Packing Checklist</h3>
-
 
     <section className="packing-checklist">
 
