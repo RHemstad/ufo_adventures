@@ -9,3 +9,29 @@
     margin-top: 0;
     padding-top: 0;
 }
+
+#ticket-confirmation .ticket-choices {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#ticket-confirmation .ticket-choices div {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+}
+
+#ticket-confirmation div.item {
+
+}
+
+
+#ticket-confirmation .ticket-choices div div:first-child {
+   justify-content: flex-end;
+   padding-right: var(--spacing-md);
+}
+
+#ticket-confirmation .ticket-choices div div:last-child {
+    font-weight: var(--font-weight-bold);
+}
