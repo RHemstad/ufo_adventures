@@ -3,8 +3,9 @@ import './ticket_checkout.css';
 import React, {useState} from 'react';
 import Subheader from '../subheader/Subheader.jsx';
 import { useNavigate } from "react-router-dom";
-import * as yup from 'yup' // importing functions from yup library
+import * as yup from 'yup' // importing functions from yup library for form validation todo
 import {CheckoutContext} from "./TicketContextProvider"
+import { useForm } from 'react-hook-form'
 
 const TicketCheckout = () => {
 
@@ -25,15 +26,16 @@ const TicketCheckout = () => {
 // defining yup schema to validate our form
 
   const userSchema = yup.object().shape({
-    newFirstName: yup.string().required(),
-    newLastName: yup.string().required(),
-    newEmail: yup.string().email().required(),
-    newPhone: yup.number().required(),
-    newAddress: yup.string().required(),
-    newCity: yup.string().required(),
-    newCheckoutState: yup.string().required(),
-    newZipcode: yup.string().required(),
+    newFirstName: yup.string().required("First Name is required"),
+    newLastName: yup.string().required("Last Name is required"),
+    newEmail: yup.string().email().required("Email is required"),
+    newPhone: yup.number().required("Phone Number is required and it must be numbers only."),
+    newAddress: yup.string().required("Address is required"),
+    newCity: yup.string().required("City is required"),
+    newCheckoutState: yup.string().required("State is required"),
+    newZipcode: yup.string().required("Zipcode is required"),
   })
+
 
 //******** VALIDATE FORM FUNCTION ************ */
 async function validateForm() {
@@ -49,21 +51,26 @@ async function validateForm() {
     newCheckoutState: newCheckoutState,
     newZipcode: newZipcode
     }
-
     // validating this dataObject concerning Yup userSchema
+    const isValid = await userSchema.isValid(dataObject);
 
-    const isValid = await userSchema.isValid(dataObject)
 
     if (isValid) {
-      alert('Form is Valid');
+     // alert('Form is Valid');
       onUpdateCheckout();
     } else {
-      alert('Form is Invalid')
+        /* TODO: display error messages to user under the input  */
+        userSchema.validate(dataObject, { abortEarly: false }).catch(function(errors) {
+            errors.inner.forEach(error => {
+            //console.log(error.path, error.name, error.errors)
+            //alert(`Form is Invalid and my TODO is to show the errors under the field. ${error.errors}`)
+            //return errors;
+            })
+        });
+
+       alert('Sorry, this Form is NOT Valid. Please check the fields and try again.');
     }
   }
-
-
-
 
 
 //******** ONUPDATE CHECKOUT FUNCTION ************ */
@@ -147,14 +154,14 @@ async function validateForm() {
 
                 <div className="input-area">
                     <label> First Name <span aria-label="required">*</span></label>
-                    <input  
+                    <input 
+                    required 
+                    name="newFirstName"
                     type="text" 
                     value={newFirstName} 
                     onChange={(e) => setNewFirstName(e.target.value)} 
                     className="form-control" 
-                    required
                     />
-
                 </div>
 
 

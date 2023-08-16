@@ -42,6 +42,8 @@ You might also need to do the following when you first clone the site and you tr
 
 `npm install yup`
 
+`npm install @hookform/resolvers yup`
+
 npm install express express-fileupload 
 
 
