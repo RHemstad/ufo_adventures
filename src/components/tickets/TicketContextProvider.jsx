@@ -4,6 +4,11 @@ export const CheckoutContext = React.createContext();
 export const UpdateCheckoutContext = React.createContext();
 
 export const CheckoutProvider = ({value, children}) => {
+    const [abductionDay, setAbductionDay] = useState(value);
+    const [abductionLocation, setAbductionLocation] = useState(value);
+    const [abductionPackage, setAbductionPackage] = useState(value);
+    const [standardPackage, setStandardPackage] = useState(value);
+    const [vipPackage, setVipPackage] = useState(value);
     const [firstName, setFirstName] = useState(value);
     const [lastName, setLastName] = useState(value);
     const [phone, setPhone] = useState(value);
@@ -15,11 +20,54 @@ export const CheckoutProvider = ({value, children}) => {
     
   return (
 
-<CheckoutContext.Provider value={{firstName, lastName, phone, email, address, city, checkoutState, zipcode, setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode}}>
+<CheckoutContext.Provider value={{abductionDay, abductionLocation, abductionPackage, standardPackage, vipPackage, firstName, lastName, phone, email, address, city, checkoutState, zipcode, setAbductionDay, setAbductionLocation, setAbductionPackage, setStandardPackage, setVipPackage, setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode}}>
         {children}
 </CheckoutContext.Provider>
   );
 };
+
+
+export const useAbductionDay = () => {
+  return useContext(CheckoutContext);
+};
+
+export const useUpdateAbductionDay = () => {
+  return useContext(UpdateCheckoutContext);
+};
+
+export const useAbductionLocation = () => {
+  return useContext(CheckoutContext);
+};
+
+export const useUpdateAbductionLocation = () => {
+  return useContext(UpdateCheckoutContext);
+};
+
+export const useAbductionPackage = () => {
+  return useContext(CheckoutContext);
+};
+
+export const useUpdateAbductionPackage = () => {
+  return useContext(UpdateCheckoutContext);
+};
+
+export const useStandardPackage = () => {
+  return useContext(CheckoutContext);
+};
+
+export const useUpdateStandardPackage = () => {
+  return useContext(UpdateCheckoutContext);
+};
+
+export const useVipPackage = () => {
+  return useContext(CheckoutContext);
+};
+
+export const useVipStandardPackage = () => {
+  return useContext(UpdateCheckoutContext);
+};
+
+
 
 
 export const useFirstName = () => {
