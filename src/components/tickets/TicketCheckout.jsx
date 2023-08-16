@@ -22,8 +22,54 @@ const TicketCheckout = () => {
     let [newZipcode, setNewZipcode] = useState(zipcode);
 
 
+// defining yup schema to validate our form
+
+  const userSchema = yup.object().shape({
+    newFirstName: yup.string().required(),
+    newLastName: yup.string().required(),
+    newEmail: yup.string().email().required(),
+    newPhone: yup.number().required(),
+    newAddress: yup.string().required(),
+    newCity: yup.string().required(),
+    newCheckoutState: yup.string().required(),
+    newZipcode: yup.string().required(),
+  })
+
+//******** VALIDATE FORM FUNCTION ************ */
+async function validateForm() {
+    // creating a form data object
+
+    let dataObject = {
+    newFirstName: newFirstName,
+    newLastName: newLastName,
+    newEmail: newEmail,
+    newPhone: newPhone,
+    newAddress: newAddress,
+    newCity: newCity,
+    newCheckoutState: newCheckoutState,
+    newZipcode: newZipcode
+    }
+
+    // validating this dataObject concerning Yup userSchema
+
+    const isValid = await userSchema.isValid(dataObject)
+
+    if (isValid) {
+      alert('Form is Valid');
+      onUpdateCheckout();
+    } else {
+      alert('Form is Invalid')
+    }
+  }
+
+
+
+
+
+//******** ONUPDATE CHECKOUT FUNCTION ************ */
+
   const onUpdateCheckout = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
 
 
     setFirstName(newFirstName);
@@ -53,7 +99,7 @@ const TicketCheckout = () => {
 <fieldset>
 <h4>Select Your Abduction Day</h4>
  <select class="select">
- <option value="">--Please choose an option--</option>
+ <option value="">--Please choose an abduction day--</option>
   <option value="sat">Saturday, November 3, 2023</option>
   <option value="sun">Sunday,  November 4, 2023</option>
 </select>
@@ -62,7 +108,7 @@ const TicketCheckout = () => {
 <fieldset>
 <h4>Select Your Abduction Location</h4>
  <select class="select">
- <option value="">--Please choose an option--</option>
+ <option value="">--Please choose an abduction location--</option>
   <option value="1">Dallas, TX</option>
   <option value="2">Los Angeles, CA</option>
   <option value="3">Vancouver, WA</option>
@@ -239,8 +285,8 @@ const TicketCheckout = () => {
 </fieldset>
             {/* ***** PAYMENT TYPE ***** */}
             <div className="payment-type"> 
-            {/*<button type="button" className="primary-button" onClick={() => {validateForm()}}>Place Order</button>*/}
-            <button type="submit" className="primary-button" onClick={onUpdateCheckout}>Submit</button>
+            <button type="button" className="primary-button" onClick={() => {validateForm()}}>Place Order</button>
+            {/*<button type="submit" className="primary-button" onClick={onUpdateCheckout}>Submit</button>*/}
             </div>
 
 
