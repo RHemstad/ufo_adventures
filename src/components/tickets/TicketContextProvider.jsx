@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
 
-const CheckoutContext = React.createContext();
-const UpdateCheckoutContext = React.createContext();
+export const CheckoutContext = React.createContext();
+export const UpdateCheckoutContext = React.createContext();
 
 export const CheckoutProvider = ({value, children}) => {
-
     const [firstName, setFirstName] = useState(value);
     const [lastName, setLastName] = useState(value);
     const [phone, setPhone] = useState(value);
@@ -16,10 +15,8 @@ export const CheckoutProvider = ({value, children}) => {
     
   return (
 
-<CheckoutContext.Provider value={{firstName, lastName, phone, email, address, city, checkoutState, zipcode}}>
-      <UpdateCheckoutContext.Provider value={{setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode}}>
+<CheckoutContext.Provider value={{firstName, lastName, phone, email, address, city, checkoutState, zipcode, setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode}}>
         {children}
-      </UpdateCheckoutContext.Provider>
 </CheckoutContext.Provider>
   );
 };

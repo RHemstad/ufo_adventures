@@ -4,8 +4,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Button from '../button/Button';
 import Hero from '../hero/Hero';
-
-
+import { useUserName } from "../profile/UserContextProvider";
 
 import ufo from '../../assets/images/ufo.svg';
 import standard_package from '../../assets/images/standard_package.png';
@@ -16,10 +15,9 @@ import testimonial3 from '../../assets/images/testimonial3.png';
 
 
 const Home = () => {
+ const userName = useUserName();
   return (
     <>
-
-
 
 <Hero/>
 

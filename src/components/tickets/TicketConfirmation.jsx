@@ -1,26 +1,18 @@
 import React, {useState, createContext} from 'react'
-import {useFirstName, useLastName, usePhone, useEmail, useAddress, useCity, useCheckoutState, useZipcode } from "./TicketContextProvider";
-
+import {CheckoutContext} from "./TicketContextProvider"
 
 const TicketConfirmation = () => {
 
-  const firstName = useFirstName();
-  const lastName = useLastName();
-  const phone = usePhone();
-  const email = useEmail();
-  const address = useAddress();
-  const city = useCity();
-  const checkoutState = useCheckoutState();
-  const zipcode = useZipcode();
-
-
-
+  let {firstName, lastName, phone, email, address, city, checkoutState, zipcode, setFirstName, setLastName, setPhone, setEmail, setAddress, setCity, setCheckoutState, setZipcode} = React.useContext(CheckoutContext);
 
   return (
     <>
 
     WOOT - got this far
-{TicketConfirmation.firstName}
+
+    {firstName}
+
+
 
     </>
   )

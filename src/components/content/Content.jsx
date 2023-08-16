@@ -7,6 +7,7 @@ import Weather from "../weather/Weather"
 import Game from "../game/Game"
 import TicketConfirmation from "../tickets/TicketConfirmation";
 import TicketCheckout from "../tickets/TicketCheckout";
+import UpdateProfileName from "../profile/UpdateProfileName";
 
 import background from '../../assets/images/background.svg';
 
@@ -26,6 +27,7 @@ const Content = () => {
       <Route path="/packingchecklist" element={<PackingChecklist />} />
       <Route path="/weather" element={<Weather />} />
       <Route path="/game" element={<Game />} />
+      <Route path="/profile" element={<UpdateProfileName />} />
    </Routes>
 
 
