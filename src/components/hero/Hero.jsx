@@ -1,5 +1,6 @@
 import React from 'react'
 import './hero.css';
+import ufo from '../../assets/images/ufo.svg';
 
 
 const Hero = () => {
@@ -10,11 +11,11 @@ const Hero = () => {
 {/* **************** HERO  ******************* */} 
 {/* ****************************************** */} 
 
-{/*
+
 <div id="animation">
 <div id="ufo" className="x"><img className="y" src={ufo} alt="spaceship"/></div>
 </div>
-  */}
+  
 
 
 <section id="hero" className="hero">
