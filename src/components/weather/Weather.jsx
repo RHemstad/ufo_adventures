@@ -4,6 +4,8 @@ import WeatherDisplay from './WeatherDisplay';
 import Subheader from '../subheader/Subheader';
 import WeatherImage from "./WeatherImage";
 
+
+
 const locationOptions = [
     { id: 1, label: 'Dallas, TX', value: 'lat=32.779167&lon=-96.808891' },
     { id: 2, label: 'Los Angeles, CA', value: 'lat=34.052235&lon=-118.243683' },
@@ -13,8 +15,6 @@ const locationOptions = [
     { id: 6, label: 'The Uintah Basin, UT (aka Skinwalker Ranch)', value: 'lat=40.258901595300905&lon=-109.8929713505666' }
 ];
 
-const API_KEY = '8c3d5b5fd86452ccea0e33353f2211a4';
-const API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const Weather = () => {
 
@@ -23,7 +23,7 @@ const Weather = () => {
     const [submitted, setSubmitted] = useState(false);
     const fetchWeatherData = async () => {
         try {
-            const response = await fetch(`${API_BASE_URL}?${selectedLocation}&appid=${API_KEY}&units=imperial`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}?${selectedLocation}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`);
             const data = await response.json();
             setWeatherData(data);
             setSubmitted(true);
