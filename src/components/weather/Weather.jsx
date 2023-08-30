@@ -13,10 +13,9 @@ const locationOptions = [
     { id: 6, label: 'The Uintah Basin, UT (aka Skinwalker Ranch)', value: 'lat=40.258901595300905&lon=-109.8929713505666' }
 ];
 
+//works calling this directly but not through .env, not sure why. I copied everything from what I did with William, but the only thing that's different is calling the keys directly vs .env
 const REACT_APP_API_KEY = '8c3d5b5fd86452ccea0e33353f2211a4';
-const REACT_API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
-
-
+const REACT_APP_API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const Weather = () => {
 
@@ -25,9 +24,12 @@ const Weather = () => {
     const [submitted, setSubmitted] = useState(false);
     const fetchWeatherData = async () => {
         try {
-            console.error(`Made it to API`);
-            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}?${selectedLocation}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`);
+            console.error(`Made it to API - selectedLocation:${selectedLocation}`);
+            const response = await fetch(`${REACT_APP_API_BASE_URL}?${selectedLocation}&appid=${REACT_APP_API_KEY}&units=imperial`);
+            // const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}?${selectedLocation}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`);
+            console.log(response);
             const data = await response.json();
+            console.log(data);
             setWeatherData(data);
             setSubmitted(true);
         } catch (error) {
@@ -37,8 +39,9 @@ const Weather = () => {
         }
     };
     
-    const handleLocationChange = (location) => {
-        setSelectedLocation(location);
+    const handleLocationChange = (location, e) => {
+        setSelectedLocation(e.target.value);
+        console.log(e.target);
     };
 
     const handleSearch = () => {
@@ -78,7 +81,7 @@ const Weather = () => {
                                             name="location"
                                             value={location.value}
                                             checked={selectedLocation === location.value}
-                                            onChange={() => handleLocationChange(location.value)}
+                                            onChange={(e) => handleLocationChange(location.value, e)}
                                         />
                                         {location.label}
                                         </label>
