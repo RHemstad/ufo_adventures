@@ -4,8 +4,6 @@ import WeatherDisplay from './WeatherDisplay';
 import Subheader from '../subheader/Subheader';
 import WeatherImage from "./WeatherImage";
 
-
-
 const locationOptions = [
     { id: 1, label: 'Dallas, TX', value: 'lat=32.779167&lon=-96.808891' },
     { id: 2, label: 'Los Angeles, CA', value: 'lat=34.052235&lon=-118.243683' },
@@ -14,6 +12,10 @@ const locationOptions = [
     { id: 5, label: 'Albuquerque, NM', value: 'lat=35.106766&lon=-106.629181' },
     { id: 6, label: 'The Uintah Basin, UT (aka Skinwalker Ranch)', value: 'lat=40.258901595300905&lon=-109.8929713505666' }
 ];
+
+const REACT_APP_API_KEY = '8c3d5b5fd86452ccea0e33353f2211a4';
+const REACT_API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
+
 
 
 const Weather = () => {
