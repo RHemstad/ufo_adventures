@@ -23,6 +23,7 @@ const Weather = () => {
     const [submitted, setSubmitted] = useState(false);
     const fetchWeatherData = async () => {
         try {
+            console.error(`Made it to API`);
             const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}?${selectedLocation}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`);
             const data = await response.json();
             setWeatherData(data);
