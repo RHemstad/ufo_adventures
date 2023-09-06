@@ -13,9 +13,7 @@ const locationOptions = [
     { id: 6, label: 'The Uintah Basin, UT (aka Skinwalker Ranch)', value: 'lat=40.258901595300905&lon=-109.8929713505666' }
 ];
 
-//works calling this directly but not through .env, not sure why. I copied everything from what I did with William, but the only thing that's different is calling the keys directly vs .env
-// const REACT_APP_API_KEY = '8c3d5b5fd86452ccea0e33353f2211a4';
-// const REACT_APP_API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
+
 
 const Weather = () => {
 
