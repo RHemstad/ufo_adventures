@@ -11,8 +11,8 @@ const WeatherDisplay = ({ weatherData }) => {
               <h2>
                 {weatherData.name}, {weatherData.sys && weatherData.sys.country}
               </h2>
-              <p>Temperature: {Math.round(weatherData.main.temp)}°F</p>
-              <p>Weather: {weatherData.weather[0].description}</p>
+              <h4 className="temp">{Math.round(weatherData.main.temp)}°F</h4>
+              <p className="tempdesc">{weatherData.weather[0].description}</p>
             </div>
           </>
         )}
