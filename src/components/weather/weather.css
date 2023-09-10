@@ -43,10 +43,16 @@
 
 #img_Drizzle, #img_Thunderstorm, #img_Clouds {
 	background-color: var(--color-weather-1);
+	border-radius: var( --size-border-radius-medium);
 }
 
 #img_Clear{
-	background-color: var(--color-weather-2);
+	background-color: var(--color-weather-1);
+	border-radius: var( --size-border-radius-medium);
+}
+
+#weather h3 {
+	text-align: center;
 }
 
 .display_main {
@@ -58,10 +64,23 @@
 
 .display_img img {
 	width: 100%;
-	min-width: 200px;
-	max-width: 400px;
+	min-width: 150px;
+	max-width: 150px;
 }
 
 .display_img {
 	flex-grow: 2;
+	margin-bottom: var(--spacing-sm);
+}
+
+h4.temp {
+	font-size: var(--font-size-h1);
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.tempdesc {
+	text-align: center;
+	font-weight: var(--font-weight-bold);
+	margin-top: 0;
 }
